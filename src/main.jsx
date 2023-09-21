@@ -1,21 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import {RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Root from './Component/RootFile/Root'
 
 const router=createBrowserRouter([
   {
     path:"/",
-    element: <section>
-      <div>Hello World</div>
-      <Outlet></Outlet>
-      
-    </section> ,
+    element: <Root></Root> ,
 
     children:[
       {
+        path:"/",
+        element: <div>Welcome To my Website</div>
+      },
+      {
         path:"/about",
-        element: <div>Chilred</div>
+        element: <div>About my website reade more</div>
+      },
+      {
+        path:"/job",
+        element: <div>Jobs in our website</div>
       },
     ]
   }
