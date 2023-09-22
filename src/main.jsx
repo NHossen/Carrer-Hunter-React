@@ -5,6 +5,8 @@ import {RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Component/RootFile/Root'
 import Appliedjobs from './Component/AppliedJobs/Appliedjobs'
 import ErrorPage from './Component/ErrorPage/ErrorPage'
+import Home from './Component/Home/Home'
+
 
 const router=createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router=createBrowserRouter([
     children:[
       {
         path:"/",
-        element: <div>Welcome To my Website</div>
+        element: <h1><Home></Home></h1>
       },
       {
         path:"/jobs",
@@ -26,7 +28,7 @@ const router=createBrowserRouter([
       },
       {
         path:"/statistics",
-        element: <div>Jobs in our website</div>
+        element: <div></div>
       },
     ]
   }
